@@ -105,18 +105,21 @@ class Chartbeat(object):
     def geo(self, section=None, author=None, path=None, limit=100):
         return self._request("/live/geo/", section=section, author=author, path=path, limit=limit)
 
-    def alerts(self, since):
-        return self._request("/historical/dashapi/alerts/", since=since)
+    def engage_series(self, human="false", start=None, end=None, limit=None):
+        return self._request("/historical/engagement/series/", human=human, start=start, end=end, limit=limit)
 
-    def snapshots(self, timestamp):
-        return self._request("/historical/dashapi/snapshots/", timestamp=timestamp)
+    def engage_stats(self, human="false", start=None, end=None, properties="max"):
+        return self._request("/historical/engagement/stats/", human=human, start=start, end=end, properties=properties)
 
-    def stats(self):
-        return self._request("/historical/dashapi/stats/")
+    def social_series(self, human="false", start=None, end=None, limit=None, fields="tw_url_mentions,fb_domain_activity"):
+        return self._request("/historical/social/series/", human=human, start=start, end=end, limit=limit, fields=fields)
 
-    def data_series(self, days, minutes, type, val=None, timestamp=None):
-        return self._request("/historical/dashapi/data_series/", days=days,
-            minutes=minutes, type=type, val=val, timestamp=timestamp)
+    def social_stats(self, human="false", start=None, end=None, properties="max", fields="tw_url_mentions,fb_domain_activity"):
+        return self._request("/historical/social/stats/")
 
-    def day_data_series(self, type, timestamp=None):
-        return self._request("/historical/dashapi/day_data_series/", type=type, timestamp=timestamp)
+    def traffic_series(self, human="false", start=None, end=None, limit=None, fields="people"):
+        return self._request("/historical/traffic/series/", human=human, start=start, end=end, limit=limit, fields=fields)
+
+    def traffic_stats(self, human="false", start=None, end=None, properties="max", fields="people"):
+        return self._request("/historical/traffic/stats/", human=human, start=start, end=end, properties=properties, fields=fields)
+

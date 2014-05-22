@@ -14,7 +14,7 @@ setup(
     author_email='timothee.peignier@tryphon.org',
     url='https://github.com/detroit-media-partnership/chartbeatpy',
     packages=['chartbeatpy'],
-    zip_safe=False,
+    keywords=['chartbeat', 'API'],
     include_package_data=True,
     license='LICENSE.rst',
     install_requires=[
