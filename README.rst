@@ -36,9 +36,9 @@ Quick How To
     from chartbeatpy import Chartbeat
 
     beat = Chartbeat("<your chartbeat api key>", "<your host>")
+    # live data
     beat.quickstats()
     beat.geo()
-
     # some API endpoints require extra parameters
     beat.histogram(keys=[user,title], breaks=[1,2,10])
     beat.path_summary(keys=[pagetimer, time_spent, new])
