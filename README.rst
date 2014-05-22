@@ -20,7 +20,7 @@ To install charbeatpy, use pip:
 
 .. code:: bash
 
-    $ pip install chartbeat
+    $ pip install chartbeatpy
 
 or 
 
