@@ -18,17 +18,23 @@ Installation
 
 To install charbeatpy, use pip:
 
+.. code:: bash
+
     $ pip install chartbeat
 
 or 
+
+.. code:: bash
 
     $ python setup.py install
 
 Quick How To
 ------------
 
+.. code:: python
+
     from chartbeatpy import Chartbeat
-    
+
     beat = Chartbeat("<your chartbeat api key>", "<your host>")
     beat.quickstats()
     beat.geo()
@@ -38,7 +44,7 @@ Quick How To
     beat.path_summary(keys=[pagetimer, time_spent, new])
     beat.summary(keys=[domain, title, read, write, idle])
     beat.recent()
-    beat.referrers() 
+    beat.referrers()
     beat.top_pages()
 
     # historical data
@@ -52,3 +58,5 @@ Quick How To
     # specify API version number
     oldbeat = Chartbeat("<API>", "<host>", 2)
     oldbeat.quickstats()
+
+
