@@ -1,6 +1,6 @@
-from unittest import TestCase
+import unittest
 
-from chartbeat import Chartbeat
+from chartbeatpy import Chartbeat
 
 
 class ChartbeatTest(TestCase):
@@ -22,12 +22,13 @@ class ChartbeatTest(TestCase):
                 self.assertTrue(key in data[path])
 
     def test_quickstats(self):
-        data = self.beat.quickstats(path="/")
-        self.assertTrue("toprefs" in data)
+        data = self.beat.quickstats()
         self.assertTrue("visit" in data)
 
     def test_api_version(self):
-        self.beat = Chartbeat("317a25eccba186e0f6b558f45214c0e7", "avc.com", api_version='3')
-        data = self.beat.quickstats(path="/")
-        self.assertTrue("toprefs" in data)
+        altbeat = Chartbeat("317a25eccba186e0f6b558f45214c0e7", "avc.com", api_version='3')
+        data = altbeat.quickstats()
         self.assertTrue("visit" in data)
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

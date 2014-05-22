@@ -1,25 +1,32 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
+try:
+    from setuptools import setup
+except:
+    from distutils.core import setup
 
 
 setup(
-    name='charbeat',
-    version='0.2',
-    description='A charbeat/newsbeat API wrapper.',
+    name='chartbeatpy',
+    version='0.2.1',
+    description='A charbeat API wrapper.',
+    long_description=open('README.rst').read(),
     author='Timothée Peignier',
     author_email='timothee.peignier@tryphon.org',
-    url='https://github.com/cyberdelia/chartbeat',
-    packages=find_packages(),
+    url='https://github.com/detroit-media-partnership/chartbeatpy',
+    packages=['chartbeatpy'],
     zip_safe=False,
     include_package_data=True,
+    license='LICENSE.rst',
     install_requires=[
         'requests',
     ],
     classifiers=[
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
         'Topic :: Utilities',
     ]
 )
