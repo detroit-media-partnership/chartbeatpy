@@ -3,8 +3,7 @@ Chartbeatpy
 
 A simple, synchronous charbeat API wrapper.  
 This python package creates a simple "pythonic" entry point
-for the Chartbeat API.  Originally created by Timothee Peignier,
-we are adapting it to our needs here at Detroit Media Partnership.
+for the Chartbeat API.  
 
 Any requests, issues should be directed towards us in this forked 
 repository, or email me at neurosnap@gmail.com
